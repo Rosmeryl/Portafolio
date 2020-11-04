@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20201103 21:49:42.052" generator="Robot 3.2.2 (Python 2.7.18 on linux2)">
+<suite source="/home/eduardo/Documentos/Curso-QA/Portafolio/Login_Paris/login.robot" id="s1" name="Login">
+<test id="s1-t1" name="001 Registro e inicio de sesión">
+<kw name="Open Homepage" library="recursos">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20201103 21:49:42.189" level="INFO">Opening browser 'Chrome' to base url 'https://www.paris.cl/'.</msg>
+<status status="PASS" endtime="20201103 21:49:46.151" starttime="20201103 21:49:42.189"></status>
+</kw>
+<status status="PASS" endtime="20201103 21:49:46.152" starttime="20201103 21:49:42.188"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#clickLogin &gt; div &gt; div.header_login</arg>
+</arguments>
+<msg timestamp="20201103 21:49:46.153" level="INFO">Clicking element 'css=#clickLogin &gt; div &gt; div.header_login'.</msg>
+<status status="PASS" endtime="20201103 21:49:46.991" starttime="20201103 21:49:46.152"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=#collapseLogin &gt; div &gt; div.side.col-1 &gt; h3</arg>
+</arguments>
+<status status="PASS" endtime="20201103 21:49:47.092" starttime="20201103 21:49:46.992"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#dwfrm_login &gt; fieldset &gt; div.form-row.username.required.input-email &gt; div &gt; input</arg>
+</arguments>
+<status status="PASS" endtime="20201103 21:49:47.132" starttime="20201103 21:49:47.093"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=#dwfrm_login &gt; fieldset &gt; div.form-row.username.required.input-email &gt; div &gt; input</arg>
+<arg>${mail}</arg>
+</arguments>
+<msg timestamp="20201103 21:49:47.133" level="INFO">Typing text 'jeanr123@gmail.com' into text field 'css=#dwfrm_login &gt; fieldset &gt; div.form-row.username.required.input-email &gt; div &gt; input'.</msg>
+<status status="PASS" endtime="20201103 21:49:47.349" starttime="20201103 21:49:47.133"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=#dwfrm_login &gt; fieldset &gt; div.form-row.password.required.input-password &gt; div &gt; input</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20201103 21:49:47.350" level="INFO">Typing text 'Jr123456' into text field 'css=#dwfrm_login &gt; fieldset &gt; div.form-row.password.required.input-password &gt; div &gt; input'.</msg>
+<status status="PASS" endtime="20201103 21:49:47.571" starttime="20201103 21:49:47.349"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>css=#dwfrm_login &gt; fieldset &gt; div.buttons.mb-10 &gt; button</arg>
+</arguments>
+<msg timestamp="20201103 21:49:47.573" level="INFO">Clicking button 'css=#dwfrm_login &gt; fieldset &gt; div.buttons.mb-10 &gt; button'.</msg>
+<status status="PASS" endtime="20201103 21:49:47.786" starttime="20201103 21:49:47.572"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.9 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20201103 21:49:47.788" starttime="20201103 21:49:47.787"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=#box-login-header &gt; div &gt; div:nth-child(1) &gt; i &gt; img</arg>
+</arguments>
+<msg timestamp="20201103 21:49:51.241" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" endtime="20201103 21:49:53.292" starttime="20201103 21:49:47.788"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20201103 21:49:54.257" starttime="20201103 21:49:53.293"></status>
+</kw>
+<status status="PASS" endtime="20201103 21:49:54.257" critical="yes" starttime="20201103 21:49:42.188"></status>
+</test>
+<status status="PASS" endtime="20201103 21:49:54.260" starttime="20201103 21:49:42.054"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login" pass="1">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
